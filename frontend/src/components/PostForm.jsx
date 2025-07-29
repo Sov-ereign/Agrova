@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import AppContext from '../../contexts/AppContext'
-import axios from 'axios'
+import api from '../config/api'
 import { useNavigate } from 'react-router-dom'
 
 function PostForm() {
@@ -60,7 +60,7 @@ function PostForm() {
     setIsLoading(true)
     
     try {
-      const response = await axios.post('/api/predict', {
+      const response = await api.post('/predict', {
         ...postData,
         Year: Number(postData.Year),
         average_rain_fall_mm_per_year: Number(postData.average_rain_fall_mm_per_year),

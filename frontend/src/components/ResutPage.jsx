@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../../contexts/AppContext';
-import axios from 'axios';
+import api from '../config/api';
 import {
   LineChart,
   Line,
@@ -69,7 +69,7 @@ const CenteredCard = () => {
   const fetchMetricsData = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get('/api/metrics-data');
+      const response = await api.get('/metrics-data');
       setMetricsData(response.data);
     } catch (error) {
       console.error('Error fetching metrics:', error);
@@ -81,7 +81,7 @@ const CenteredCard = () => {
   const handleDownloadReport = async () => {
     try {
       setDownloadStatus('downloading');
-      const response = await axios.get('/api/download-report', {
+      const response = await api.get('/download-report', {
         responseType: 'blob'
       });
       

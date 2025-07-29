@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from './config/api';
 import './App.css'
 import PostForm from './components/PostForm';
 import Navbar from './components/header/Navbar';
@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
       try {
-      axios.get("/api/get_area_items")
+      api.get("/get_area_items")
       .then((item)=> setAreaItems(item.data))
     } catch (error) {
       console.log(error);

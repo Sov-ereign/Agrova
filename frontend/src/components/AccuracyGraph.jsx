@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import api from '../config/api'
 import {
   LineChart,
   Line,
@@ -32,7 +32,7 @@ function AccuracyGraph() {
     try {
       setIsLoading(true)
       setError(null)
-      const response = await axios.get('/api/metrics-data')
+      const response = await api.get('/metrics-data')
       setMetricsData(response.data)
     } catch (error) {
       console.error('Error fetching metrics:', error)
