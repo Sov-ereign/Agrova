@@ -40,6 +40,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",  # React dev server
+        "http://localhost:5174",  # React dev server (alternative port)
         "https://agrova.vercel.app",  # Production frontend
         "https://agrova.vercel.app/"  # Production frontend with trailing slash
     ],
