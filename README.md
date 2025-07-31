@@ -1,6 +1,10 @@
-<h1 align="center">
-   <span style="color:#2ecc71;">Agrova</span> — Advanced Crop Yield Prediction System powered by Machine Learning
+<h1 align="center" style="color:#2ecc71; font-size: 3em; margin-bottom: 0;">
+  Agrova
 </h1>
+
+<h2 align="center" style="margin-top: 0;">
+  Advanced Crop Yield Prediction System powered by Machine Learning
+</h2>
 
 <p align="center">
   <i>🌾 Get instant predictions with our real-time analysis system that processes multiple environmental parameters.</i>
