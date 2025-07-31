@@ -59,5 +59,5 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Flash019/Agrova.git
+git clone https://github.com/Sov-ereign/Agrova.git
 cd Agrova
